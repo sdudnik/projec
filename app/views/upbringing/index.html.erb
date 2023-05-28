@@ -1,0 +1,52 @@
+<div id="banner">
+<%= image_tag("title.jpg") %>
+<%= @page_title || "Казкова долина" %>
+</div>
+
+<div id="columns">
+<div id="side">
+         <a href="/home/index">Головна</a><br />
+         <a href="dear_parents">Шановні батьки</a><br />
+         <a href="breeding_process">Будні і свята</a><br />
+         <a href="history">Із історії</a><br />
+         <a href="contact">Контакти</a><br />
+         <a href="http://fairy-valley.vn.ua:3001">Фотогалерея</a><br />
+</div>
+<div id="main">
+             <h1 align="center">Наші гості</h1>
+             <div id="product-list">
+             <table>
+             <% for partner in @partners -%>
+             <tr  class="<%= cycle('list-line-odd', 'list-line-even') %>">
+                 <td><%= image_tag partner.photo.url(:medium) %></td>
+                 <td>
+                     <dl>
+                             <dt><h3><%= partner.name %></h3></dt>
+                             <dd><%= partner.description %></dd>
+                     </dl>
+                 </td>
+             </tr>
+<tr><td colspan="2">
+<% partner.measures.each do |c| %>
+<p>
+ <% if partner.id == 1 && c.id == 3 %>
+         <%=	link_to c.name, 'http://fairy-valley.vn.ua:3001/projects/show/4' %> <%=h c.date %>
+     <% else %>
+         <% if partner.id == 1 && c.id == 4 %>
+             <%=	link_to c.name, 'http://fairy-valley.vn.ua:3001/projects/show/5' %> <%=h c.date %>
+                 <% else %>
+                     <% if partner.id == 1 && c.id == 11 %>
+                         <%=	link_to c.name, 'http://fairy-valley.vn.ua:3001/projects/show/6' %> <%=h c.date %>
+                             <% else %>
+         <%=	h c.name %> <%=h c.date %>
+     <% end %>
+     <% end %>
+     <% end %>
+</p>
+<% end %>
+<td><tr>
+             <% end %>
+             </table>
+             </div>
+</div>
+</div>

@@ -1,0 +1,41 @@
+       <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+       <html>
+       <head>
+         <title>Казкова долина</title>
+         <%= stylesheet_link_tag "depot", :media => "all" %>
+       </head>
+       <body id="store">
+         <div id="banner">
+           <%= image_tag("title.jpg") %>
+           <%= @page_title || "Казкова долина" %>
+         </div>
+
+       <div id="columns">
+         <div id="side">
+					<a href="/home/index">Головна</a><br />
+					<a href="dear_parents">Шановні батьки</a><br />
+					<a href="breeding_process">Будні і свята</a><br />
+					<a href="upbringing">Наші гості</a><br />
+					<a href="history">Із історії</a><br />
+					<a href="http://localhost">Фотогалерея</a><br />
+         </div>
+         <div id="main">
+<h1 align="center">Контактна інформація та георафічне розташування</h1>
+
+<div align="center"><br><%= image_tag("mm.jpg") %></div></p>
+&nbsp;&nbsp;&nbsp;Директор: Михайло Миколайович Мартенюк - очолює оздоровчий заклад з 1987 року<br><br>
+
+<h3 align="center">Як знайти</h3>
+<div align="center"><br><%= image_tag("map.jpg") %></div>
+
+<p>&nbsp;&nbsp;&nbsp;Адреса:<br>
+<p>22344, Вінницька обл., Літинський район, село Сосни.<br>
+ППНОДЗ “Казкова долина” код 04542011, <br>
+р/р 26003055301497 в ВФ КБ Приватбанк МФО 302689, м. Вінниця.<br>
+Телефон: (04347)-2-11-36</p>
+
+         </div>
+       </div>
+       </body>
+       </html>
+

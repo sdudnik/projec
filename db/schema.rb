@@ -11,10 +11,13 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2010_04_25_015656) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "measures", force: :cascade do |t|
     t.date "date"
     t.string "name"
-    t.integer "partner_id"
+    t.bigint "partner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["partner_id"], name: "index_measures_on_partner_id"

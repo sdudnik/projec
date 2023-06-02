@@ -71,3 +71,10 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+group :production do
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem "pg"
+
+end
+

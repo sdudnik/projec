@@ -6,55 +6,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
-    <header>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div class="container-fluid">
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-mdb-toggle="collapse"
-            data-mdb-target="#navbarExample01"
-            aria-controls="navbarExample01"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-          <div class="collapse navbar-collapse" id="navbarExample01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item active">
-                <%= link_to 'Головна', root_path, class: 'nav-link px-2' %>
-              </li>
-              <li class="nav-item">
-                <%= link_to 'Шановні батьки', dear_parents_path, class: 'nav-link px-2' %>
-              </li>
-              <li class="nav-item">
-                <%= link_to 'Будні і свята', breeding_process_path, class: 'nav-link px-2' %>
-              </li>
-              <li class="nav-item">
-                <%= link_to 'Із історії', history_path, class: 'nav-link px-2' %>
-              </li>
-              <li class="nav-item">
-              <%= link_to 'Контакти', contact_path, class: 'nav-link px-2' %>
-              </li>
-            </ul>
-      </div>
-        </div>
-      </nav>
-      <!-- Navbar -->
-      <!-- Jumbotron -->
-      <div class="p-5 text-center bg-light" style="margin-top: 18px;">
-        <main class="container mt-3">
+    <% render 'shared/menu' %>
+    <div class="container">
         <%= yield %>
-        </main>
-      </div>
-      <!-- Jumbotron -->
-    </header> 
+        <%= render 'shared/footer' %>
+
+    </div>
   </body>
 </html>

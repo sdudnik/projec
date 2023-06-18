@@ -1,14 +1,13 @@
-
-<!--
-<ul>
-    <li><%= link_to 'Головна', root_path %></li>
-    <li><%= link_to 'Шановні батьки', dear_parents_path %></li>
-    <li><%= link_to 'Будні і свята', breeding_process_path %></li>
-    <li><%= link_to 'Із історії', history_path %></li>
-    <li><%= link_to 'Контакти', contact_path %></li>
-</ul>
-
-<div id="side">
-         <a href="upbringing">Наші гості</a><br />
-         <a href="http://fairy-valley.vn.ua:3001">Фотогалерея</a><br />
-</div> -->
+<header class="navbar">
+  <div class="container">
+  <%= link_to "Казкова долина", root_path, id: "logo" %>
+    <nav> 
+      <ul class="nav nav-tabs">
+          <li><%= link_to 'Шановні батьки', dear_parents_path, class: "nav-link" %></li>
+          <li><%= link_to 'Будні і свята', breeding_process_path, class: "nav-link" %></li>
+          <li><%= link_to 'Із історії', history_path, class: "nav-link" %></li>
+          <li><%= link_to 'Контакти', contact_path, class: "nav-link" %></li>
+      </ul>
+    </nav>
+  </div>
+  </header>

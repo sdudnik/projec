@@ -1,12 +1,24 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "казкова долина", root_path, id: "logo" %>
+    
     <nav>
       <ul class="nav nav-tabs navbar-right">
-        <li><%= link_to 'Шановні батьки', dear_parents_path, class: "nav-link" %></li>
-        <li><%= link_to "Будні і свята", breeding_process_path, class: "nav-link" %></li>
-        <li><%= link_to 'Із історії', history_path, class: "nav-link" %></li>
-        <li><%= link_to 'Контакти', contact_path, class: "nav-link" %></li>
+        <li class="nav-item">
+          
+          <%= link_to 'Головна', root_path, class: (@page_tab == "home"? "nav-link active" : "nav-link") %>
+
+        </li>
+
+        <li class="nav-item">
+          <%= link_to 'Шановні батьки', dear_parents_path, class: (@page_tab == "dear_parents"? "nav-link active" : "nav-link") %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Будні і свята", breeding_process_path, class: (@page_tab == "breeding_process"? "nav-link active" : "nav-link") %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Із історії', history_path, class: (@page_tab == "history"? "nav-link active" : "nav-link") %>
+        </li>
+        <li><%= link_to 'Контакти', contact_path, class: (@page_tab == "contact"? "nav-link active" : "nav-link") %></li>
         <li><%= link_to "Фотогалерея", '#', class: "nav-link" %></li>
       </ul>
     </nav>
